@@ -1,0 +1,224 @@
+.layout {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+/* ── 헤더 ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--chart-blue);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── 배너 ── */
+.banner {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.banner-error {
+  border-color: var(--status-critical);
+  color: var(--status-critical);
+}
+
+/* ── KPI 타일 ── */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.tile-label {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.tile-value {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+.tile-sub {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ── 카드/차트 ── */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+.charts .card {
+  margin-bottom: 0;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+/* ── 테이블 ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  text-align: left;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--baseline);
+  white-space: nowrap;
+}
+
+td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--grid);
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+.strong {
+  font-weight: 700;
+}
+
+/* 위험 등급 칩 — 상태색 + 텍스트 라벨 병기 (색상 단독 의존 금지) */
+.band {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid currentColor;
+}
+
+.band-high {
+  color: var(--status-critical);
+}
+
+.band-mid {
+  color: var(--status-serious);
+}
+
+.band-low {
+  color: var(--text-muted);
+}
+
+/* ── 리포트 ── */
+.report-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.engine {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.report-body {
+  color: var(--text-secondary);
+}
+
+.report-body h1,
+.report-body h2,
+.report-body h3 {
+  color: var(--text-primary);
+  font-size: 15px;
+  margin: 18px 0 6px;
+}
+
+.report-body table {
+  margin: 8px 0;
+}
+
+.report-body code {
+  background: var(--page);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+.empty {
+  color: var(--text-muted);
+}
+
+.footer {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+}

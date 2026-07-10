@@ -1,0 +1,24 @@
+# 생성 데이터 (data-gen/generate.py로 재생성)
+/data/
+
+# 학습 산출물
+ai-service/artifacts/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Java / Maven
+sap-mock/target/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
